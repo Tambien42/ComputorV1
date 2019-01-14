@@ -1,0 +1,56 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: fchuc <fchuc@student.42.fr>                +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2017/03/10 12:00:28 by fchuc             #+#    #+#              #
+#    Updated: 2018/12/15 17:11:25 by fchuc            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+NAME = computorV1
+
+SRC_PATH = ./srcs/
+OBJ_PATH = ./obj/
+INC_PATH = ./includes/
+LIB_PATH = ./libft/
+
+SRC_FILES = main.c \
+			parse.c \
+			solve.c \
+			print.c
+
+OBJ_FILES = $(SRC_FILES:.c=.o)
+
+LIB_FILES = libft.a
+
+OBJ_NAME = $(addprefix $(OBJ_PATH),$(OBJ_FILES))
+LIBFT = $(addprefix $(LIB_PATH),$(LIB_FILES))
+
+all: $(NAME)
+
+$(OBJ_PATH) :
+		mkdir $(OBJ_PATH)
+
+$(OBJ_PATH)%.o : $(SRC_PATH)%.c
+		$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_PATH) -I $(LIB_PATH)includes
+
+$(NAME) : $(OBJ_PATH) $(OBJ_NAME)
+		make -C $(LIB_PATH)
+		$(CC) $(CFLAGS) $(OBJ_NAME) $(LIBFT) -o $@ -I $(INC_PATH) -I $(LIB_PATH)includes/
+
+.PHONY: clean fclean
+
+clean:
+		rm -rf $(OBJ_PATH)
+		make -C $(LIB_PATH) clean
+
+fclean: clean
+		rm -f $(NAME)
+		make -C $(LIB_PATH) fclean
+
+re: fclean all

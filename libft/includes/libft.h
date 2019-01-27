@@ -6,7 +6,7 @@
 /*   By: fchuc <fchuc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 16:30:28 by fchuc             #+#    #+#             */
-/*   Updated: 2018/12/15 21:27:38 by fchuc            ###   ########.fr       */
+/*   Updated: 2019/01/18 12:24:08 by fchuc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,12 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct 		s_matrix {
+    size_t			rows;
+    size_t			cols;
+    double			*data;
+}					t_matrix;
 
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
@@ -118,4 +124,5 @@ int 				convertDecimalToOctal(int decimalNumber);
 long long 			convertOctalToDecimal(int octalNumber);
 int 				convertBinarytoOctal(long long binaryNumber);
 long long 			convertOctalToBinary(int octalNumber);
+double				ft_toradians(double degrees);
 #endif

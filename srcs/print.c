@@ -1,5 +1,6 @@
 #include "computorV1.h"
 
+// <TODO>if all element = 0 print 0 = 0</TODO>
 void print_equation(int *terms) {
 	int i = 0;
 

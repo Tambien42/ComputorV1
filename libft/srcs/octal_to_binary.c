@@ -1,4 +1,4 @@
-##include "libft.h"
+#include "libft.h"
 
 long long convertOctalToBinary(int octalNumber)
 {
@@ -7,7 +7,7 @@ long long convertOctalToBinary(int octalNumber)
 
     while(octalNumber != 0)
     {
-        decimalNumber += (octalNumber%10) * pow(8,i);
+        decimalNumber += (octalNumber%10) * ft_power(8,i);
         ++i;
         octalNumber/=10;
     }

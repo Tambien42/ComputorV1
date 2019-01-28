@@ -7,7 +7,7 @@ int convertBinarytoOctal(long long binaryNumber)
 
     while(binaryNumber != 0)
     {
-        decimalNumber += (binaryNumber%10) * pow(2,i);
+        decimalNumber += (binaryNumber%10) * ft_power(2,i);
         ++i;
         binaryNumber/=10;
     }

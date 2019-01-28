@@ -6,7 +6,7 @@
 /*   By: fchuc <fchuc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 16:30:28 by fchuc             #+#    #+#             */
-/*   Updated: 2019/01/18 12:24:08 by fchuc            ###   ########.fr       */
+/*   Updated: 2019/01/28 11:17:24 by fchuc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <math.h>
 # include "get_next_line.h"
 
 typedef struct		s_list
@@ -115,9 +116,8 @@ float				Q_rsqrt(float number);
 int 				ft_strcspn(char *string, char *chars);
 void 				ft_delspaces(char *sources);
 char 				*ft_strpbrk(char *string1, char *string2);
-bool 				leap_year(int year);
+int 				leap_year(int year);
 int 				pgcd(int n1, int n2);
-int 				is_armstrongnumber(int number);
 long long 			convertDecimalToBinary(int n);
 int 				convertBinaryToDecimal(long long n);
 int 				convertDecimalToOctal(int decimalNumber);

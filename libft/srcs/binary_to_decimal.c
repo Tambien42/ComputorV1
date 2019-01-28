@@ -1,4 +1,4 @@
-##include "libft.h"
+#include "libft.h"
 
 int convertBinaryToDecimal(long long n)
 {
@@ -7,7 +7,7 @@ int convertBinaryToDecimal(long long n)
     {
         remainder = n%10;
         n /= 10;
-        decimalNumber += remainder*pow(2,i);
+        decimalNumber += remainder*ft_power(2,i);
         ++i;
     }
     return decimalNumber;

@@ -3,25 +3,23 @@
 /**
  * Find leap year
  * @param  year year to check
- * @return      true or false
+ * @return      true 1 or false 0
  */
-bool leap_year(int year)
+int leap_year(int year)
 {
-    int year;
-
     if(year%4 == 0)
     {
         if( year%100 == 0)
         {
             if ( year%400 == 0)
-                return true;
+                return 1;
             else
-                return false;
+                return 0;
         }
         else
-            return true;
+            return 1;
     }
     else
-        return false;
-    return false;
+        return 0;
+    return 0;
 }

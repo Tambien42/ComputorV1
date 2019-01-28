@@ -1,4 +1,4 @@
-##include "libft.h"
+#include "libft.h"
 
 long long convertOctalToDecimal(int octalNumber)
 {
@@ -6,7 +6,7 @@ long long convertOctalToDecimal(int octalNumber)
 
     while(octalNumber != 0)
     {
-        decimalNumber += (octalNumber%10) * pow(8,i);
+        decimalNumber += (octalNumber%10) * ft_power(8,i);
         ++i;
         octalNumber/=10;
     }

@@ -91,7 +91,6 @@ SRC_NAME = ft_memset.c \
 			ft_strpbrk.c \
 			leap_year.c \
 			pgcd.c \
-			ft_is_armstrongnumber.c \
 			decimal_to_binary.c \
 			binary_to_decimal.c \
 			decimal_to_octal.c \

@@ -42,17 +42,6 @@ int polynomial_degree(int *terms) {
 	return degree;
 }
 
-// if (atoi(members[i]) == 0) {
-// 	i++;
-// 	continue;
-// }
-// if (ft_isdigit(members[i][0])) {
-// 	terms[atoi(strchr(members[i], '^')+1)] = terms[atoi(strchr(members[i], '^')+1)] + sign * atoi(members[i]);
-// }
-// while ((ret = ft_strpbrk(members[i], "+-")) != NULL) {
-// 	terms[atoi(strchr(ret, '^')+1)] = terms[atoi(strchr(ret, '^')+1)] + sign * atoi(ret);
-// 	memcpy(members[i], ret+1, strlen(ret));
-
 void parse_terms(int*terms, char *str, int sign) {
 	if (strchr(str, 'X') != NULL) {
 		if (strchr(str, '^') != NULL) {
@@ -65,7 +54,6 @@ void parse_terms(int*terms, char *str, int sign) {
 	else {
 		terms[0] = terms[0] + sign * atoi(str);
 	}
-	printf("%d %d %d\n", terms[0], terms[1], terms[2]);
 }
 
 void parse(char *equation) {
@@ -75,6 +63,7 @@ void parse(char *equation) {
 	char *ret;
 	char *copy;
 	int i = 0;
+	int j = 0;
 	while (terms[i]) {
 		terms[i] = 0;
 		i++;
@@ -83,21 +72,28 @@ void parse(char *equation) {
 	members = ft_strsplit(equation, '=');
 	while (members[i]) {
 		sign = (i == 0) ? 1 : -1;
-		if (((ret = ft_strpbrk(members[i], "+-")) == NULL) && (members[i] != NULL)) {//FALSE
-			printf("%s\n", members[i]);
-		}
-		while ((ret = ft_strpbrk(members[i], "+-")) != NULL) {
-			printf("%c\n", members[i][(int) (ret - members[i])]);
-			copy = malloc(sizeof(char) * strlen(members[i]));
-			memcpy(copy, members[i], (int) (ret - members[i]));
-			printf("copy:%s\n", copy);
-			memcpy(members[i], ret+1, strlen(ret));
-		}
-		if (members[i] != NULL) {
-			printf("%c\n", members[i][(int) (ret - members[i])]);
-			copy = malloc(sizeof(char) * strlen(members[i]));
-			memcpy(copy, members[i], strlen(members[i]));
-			printf("copy:%s\n", copy);
+		ret = members[i];
+		j = 0;
+		while (members[i][j]) {
+			if ((members[i][0] == '+' || members[i][0] == '-') && j == 0)
+				j++, ret++;
+			else if (members[i][j] == '+' || members[i][j] == '-') {
+				copy = malloc(sizeof(char) * j +1);
+				strncpy(copy, members[i], j);
+				parse_terms(terms, copy, sign);
+				memcpy(members[i], ret, strlen(ret-1));
+				ret = members[i];
+				j = 0;
+			}
+			else if (members[i][j+1] == '\0' && members[i] != NULL) {
+				parse_terms(terms, members[i], sign);
+				j++;
+				ret++;
+			}
+			else {
+				j++;
+				ret++;
+			}
 		}
 		i++;
 	}

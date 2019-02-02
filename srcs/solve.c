@@ -1,6 +1,6 @@
 #include "computorV1.h"
 
-int discriminant(int *terms) {
+float discriminant(int *terms) {
 	return terms[1] * terms[1] - 4 * terms[2] * terms[0];
 }
 
@@ -19,7 +19,7 @@ void first_degree(int *terms) {
 	printf("%g\n", x);
 }
 
-void second_degree(int discriminant, int *terms) {
+void second_degree(float discriminant, int *terms) {
 	float x1 = 0;
 	float x2 = 0;
 
@@ -36,16 +36,15 @@ void second_degree(int discriminant, int *terms) {
 		printf("%g\n", x1);
 	}
 	else if (discriminant > 0) {
-		printf("Discriminant is strictly positive, the two solutions are:\n");
-		x1 = (-1.0 * terms[1] - ft_sqrt(discriminant)) / (2.0 * terms[2]);
-		x2 = (-1.0 * terms[1] + ft_sqrt(discriminant)) / (2.0 * terms[2]);
+		x1 = (-1.0 * terms[1] - sqrt(discriminant)) / (2.0 * terms[2]);
+		x2 = (-1.0 * terms[1] + sqrt(discriminant)) / (2.0 * terms[2]);
 		printf("%g\n", x1);
 		printf("%g\n", x2);
 	}
 }
 
 void third_degree() {
-	printf("The polynomial degree is stricly greater than 2, I can't solve.\n");
+	printf("The polynomial degree is stricly greater than 2, can't easily be solved.\n");
 }
 
 void solve(int *terms, int degree) {

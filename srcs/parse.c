@@ -29,33 +29,27 @@ int equation_degree(char *equation) {
 	return degree;
 }
 
-int polynomial_degree(int *terms) {
-	int degree = 0;
-	int i = 0;
-
-	while (terms[i]) {
-		if (terms[i] != 0) {
-			degree = i;
-		}
-		i++;
-	}
-	return degree;
-}
-int polynomial_degree1(char *equation) {
+int polynomial_degree(char *equation) {
 	int degree = 0;
 	int max = 0;
+	char *copy;
+	char *ret;
 
-	while (strchr(equation, 'X') != NULL) {
-		if (strchr(equation, '^') != NULL) {
-			max = atoi(equation+1);
+	copy = malloc(sizeof(char) * strlen(equation) +1);
+	strncpy(copy, equation, strlen(equation));
+	while ((ret = strchr(copy, 'X')) != NULL) {
+		if ((strchr(ret, '^')) != NULL) {
+			max = atoi(ret+2);
+			memcpy(copy, ret+2, strlen(ret-1));
 			if (max > degree) {
 				degree = max;
 			}
 		}
 		else {
-			degree = 1;
+			if (degree == 1 || degree == 0)
+				degree = 1;
+			memcpy(copy, ret+1, strlen(ret-1));
 		}
-		equation++;
 	}
 	return degree;
 }
@@ -64,7 +58,6 @@ void parse_terms(int *terms, char *str, int sign) {
 	if (strchr(str, 'X') != NULL) {
 		if (strchr(str, '^') != NULL) {
 			terms[atoi(strchr(str, '^')+1)] = terms[atoi(strchr(str, '^')+1)] + sign * atoi(str);
-			printf("%d\n", terms[atoi(strchr(str, '^')+1)]);
 		}
 		else {
 			terms[1] = terms[1] + sign * atoi(str);
@@ -77,7 +70,7 @@ void parse_terms(int *terms, char *str, int sign) {
 
 void parse(char *equation) {
 	char **members;
-	int terms[polynomial_degree1(equation)];
+	int terms[polynomial_degree(equation)];
 	int sign;
 	char *ret;
 	char *copy;
@@ -118,9 +111,9 @@ void parse(char *equation) {
 		}
 		i++;
 	}
-	//printf("end:%d %d %d\n", terms[0], terms[1], terms[2]);
+	print_array_int(terms, polynomial_degree(equation));
 	printf("Reduced form: ");
-	print_equation(terms);
-	printf("Polynomial degree: %d\n", polynomial_degree1(equation));
-	solve(terms, polynomial_degree1(equation));
+	print_equation(terms, polynomial_degree(equation));
+	printf("Polynomial degree: %d\n", polynomial_degree(equation));
+	solve(terms, polynomial_degree(equation));
 }

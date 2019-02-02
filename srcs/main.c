@@ -5,7 +5,7 @@ static void help() {
 }
 
 //          5 * X^0 + 4 * X^1 - 6 * X ^ 2 = 3 * X^   0
-//          TODO: float
+//          TODO: float terms
 int main(int argc, char const *argv[]) {
 	char *equation;
 
@@ -16,7 +16,7 @@ int main(int argc, char const *argv[]) {
 	equation = ft_memalloc(ft_strlen(argv[1]));
 	ft_strcpy(equation, argv[1]);
 	ft_delspaces(equation);
-	format2(equation);
+	//format2(equation);
 	parse(equation);
 	free(equation);
 	return 0;

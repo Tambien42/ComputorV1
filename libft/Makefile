@@ -97,7 +97,8 @@ SRC_NAME = ft_memset.c \
 			octal_to_decimal.c \
 			binary_to_octal.c \
 			octal_to_binary.c \
-			ft_toradians.c
+			ft_toradians.c \
+			print_array.c
 
 SRC = $(addprefix $(SRC_PATH),$(SRC_NAME))
 

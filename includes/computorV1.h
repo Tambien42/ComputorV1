@@ -4,6 +4,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include "libft.h"
+# include <regex.h>
 
 void parse(char *equation);
 int polynomial_degree(int *terms);
@@ -15,5 +16,8 @@ void zero_degree(int *terms);
 int discriminant(int *terms);
 void print_equation(int *terms);
 int equation_degree(char *equation);
+void print_array(int *array, int length);
+int format(char *equation);
+int format2(char *equation);
 
 #endif

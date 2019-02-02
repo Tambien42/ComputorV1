@@ -16,6 +16,7 @@ int main(int argc, char const *argv[]) {
 	equation = ft_memalloc(ft_strlen(argv[1]));
 	ft_strcpy(equation, argv[1]);
 	ft_delspaces(equation);
+	format2(equation);
 	parse(equation);
 	free(equation);
 	return 0;

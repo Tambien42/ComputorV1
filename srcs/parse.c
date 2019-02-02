@@ -41,11 +41,30 @@ int polynomial_degree(int *terms) {
 	}
 	return degree;
 }
+int polynomial_degree1(char *equation) {
+	int degree = 0;
+	int max = 0;
 
-void parse_terms(int*terms, char *str, int sign) {
+	while (strchr(equation, 'X') != NULL) {
+		if (strchr(equation, '^') != NULL) {
+			max = atoi(equation+1);
+			if (max > degree) {
+				degree = max;
+			}
+		}
+		else {
+			degree = 1;
+		}
+		equation++;
+	}
+	return degree;
+}
+
+void parse_terms(int *terms, char *str, int sign) {
 	if (strchr(str, 'X') != NULL) {
 		if (strchr(str, '^') != NULL) {
 			terms[atoi(strchr(str, '^')+1)] = terms[atoi(strchr(str, '^')+1)] + sign * atoi(str);
+			printf("%d\n", terms[atoi(strchr(str, '^')+1)]);
 		}
 		else {
 			terms[1] = terms[1] + sign * atoi(str);
@@ -58,12 +77,13 @@ void parse_terms(int*terms, char *str, int sign) {
 
 void parse(char *equation) {
 	char **members;
-	int terms[equation_degree(equation)];
+	int terms[polynomial_degree1(equation)];
 	int sign;
 	char *ret;
 	char *copy;
 	int i = 0;
 	int j = 0;
+
 	while (terms[i]) {
 		terms[i] = 0;
 		i++;
@@ -81,6 +101,7 @@ void parse(char *equation) {
 				copy = malloc(sizeof(char) * j +1);
 				strncpy(copy, members[i], j);
 				parse_terms(terms, copy, sign);
+				free(copy);
 				memcpy(members[i], ret, strlen(ret-1));
 				ret = members[i];
 				j = 0;
@@ -97,9 +118,9 @@ void parse(char *equation) {
 		}
 		i++;
 	}
-	printf("end:%d %d %d\n", terms[0], terms[1], terms[2]);
+	//printf("end:%d %d %d\n", terms[0], terms[1], terms[2]);
 	printf("Reduced form: ");
 	print_equation(terms);
-	printf("Polynomial degree: %d\n", polynomial_degree(terms));
-	solve(terms, polynomial_degree(terms));
+	printf("Polynomial degree: %d\n", polynomial_degree1(equation));
+	solve(terms, polynomial_degree1(equation));
 }

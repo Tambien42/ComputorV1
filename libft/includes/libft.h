@@ -6,7 +6,7 @@
 /*   By: fchuc <fchuc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/04 16:30:28 by fchuc             #+#    #+#             */
-/*   Updated: 2019/01/28 11:17:24 by fchuc            ###   ########.fr       */
+/*   Updated: 2019/02/01 22:19:02 by fchuc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,4 +125,7 @@ long long 			convertOctalToDecimal(int octalNumber);
 int 				convertBinarytoOctal(long long binaryNumber);
 long long 			convertOctalToBinary(int octalNumber);
 double				ft_toradians(double degrees);
+void 				print_array_int(int *array, int length);
+void 				print_array_str(char **array, int length);
+void 				print_array_char(char **array, int length);
 #endif

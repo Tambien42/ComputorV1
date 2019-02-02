@@ -17,7 +17,6 @@ float discriminant(int *terms);
 void print_equation(int *terms, int length);
 int equation_degree(char *equation);
 void print_array(int *array, int length);
-int format(char *equation);
-int format2(char *equation);
+int format(char *str);
 
 #endif

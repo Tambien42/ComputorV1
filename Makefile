@@ -6,7 +6,7 @@
 #    By: fchuc <fchuc@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/10 12:00:28 by fchuc             #+#    #+#              #
-#    Updated: 2019/02/02 02:34:10 by fchuc            ###   ########.fr        #
+#    Updated: 2019/02/02 22:56:15 by fchuc            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ LIB_PATH = ./libft/
 SRC_FILES = main.c \
 			parse.c \
 			solve.c \
-			print.c 
+			print.c \
+			format.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 
@@ -41,7 +42,7 @@ $(OBJ_PATH)%.o : $(SRC_PATH)%.c
 
 $(NAME) : $(OBJ_PATH) $(OBJ_NAME)
 		make -C $(LIB_PATH)
-		$(CC) $(CFLAGS) $(OBJ_NAME) $(LIBFT) -o $@ -I $(INC_PATH) -I $(LIB_PATH)includes/
+		$(CC) $(CFLAGS) $(OBJ_NAME) $(LIBFT) -o $@ -I $(INC_PATH) -I $(LIB_PATH)includes/ -lpcre
 
 .PHONY: clean fclean
 

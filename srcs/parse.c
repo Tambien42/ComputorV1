@@ -13,22 +13,6 @@
 //         }
 // }
 
-int equation_degree(char *equation) {
-	int degree = 0;
-	char *tmp;
-
-	tmp = equation;
-	while (1) {
-		tmp = strchr(tmp, '^');
-		if (tmp == NULL) break;
-		tmp++;
-		if (atoi(tmp) > degree) {
-			degree = atoi(tmp);
-		}
-	}
-	return degree;
-}
-
 int polynomial_degree(char *equation) {
 	int degree = 0;
 	int max = 0;
@@ -51,6 +35,7 @@ int polynomial_degree(char *equation) {
 			memcpy(copy, ret+1, strlen(ret-1));
 		}
 	}
+	free(copy);
 	return degree;
 }
 
@@ -111,9 +96,11 @@ void parse(char *equation) {
 		}
 		i++;
 	}
-	print_array_int(terms, polynomial_degree(equation));
 	printf("Reduced form: ");
-	print_equation(terms, polynomial_degree(equation));
+	if (polynomial_degree(equation) == 0 || check_zero(terms, polynomial_degree(equation)) == 0)
+		printf("%d = 0\n", terms[0]);
+	else
+		print_equation(terms, polynomial_degree(equation));
 	printf("Polynomial degree: %d\n", polynomial_degree(equation));
 	solve(terms, polynomial_degree(equation));
 }

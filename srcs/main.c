@@ -5,7 +5,6 @@ static void help() {
 }
 
 //          5 * X^0 + 4 * X^1 - 6 * X ^ 2 = 3 * X^   0
-//          TODO: float terms
 int main(int argc, char const *argv[]) {
 	char *equation;
 

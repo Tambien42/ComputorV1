@@ -1,9 +1,7 @@
 #include "computorV1.h"
 
-// <TODO>if all element = 0 print 0 = 0</TODO>
 void print_equation(int *terms, int length) {
 	int i = 0;
-	int count = 0;
 
 	while (i <= length){
 		if (terms[i] != 0) {
@@ -30,7 +28,6 @@ void print_equation(int *terms, int length) {
 		}
 		else if (terms[i] == 0) {
 			i++;
-			count++;
 			continue;
 		}
 		i++;

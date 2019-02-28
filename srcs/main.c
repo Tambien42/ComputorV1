@@ -1,7 +1,7 @@
 #include "computorV1.h"
 
 static void help() {
-	printf("Usage: .........\n");
+	printf("Usage :    ./computorv1 [\"equation\"]\n");
 }
 
 //          5 * X^0 + 4 * X^1 - 6 * X ^ 2 = 3 * X^   0

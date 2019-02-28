@@ -1,18 +1,6 @@
 #include "computorV1.h"
 #include <stdio.h>
 
-// void Fraction::simplification(){
-//     int r;
-//     r=PGCD(numerateur,denominateur);
-//     numerateur=numerateur/r;
-//     denominateur=denominateur/r;
-//     //pas de - au dénominateur
-//     if(denominateur<0){
-//         numerateur=-numerateur;
-//         denominateur=-denominateur;
-//         }
-// }
-
 int polynomial_degree(char *equation) {
 	int degree = 0;
 	int max = 0;
@@ -39,17 +27,24 @@ int polynomial_degree(char *equation) {
 	return degree;
 }
 
+int get_coefficient(char *str) {
+	if (str[0] == 'X' || (str[0] == '-' && str[1] == 'X') || (str[0] == '+' && str[1] == 'X')) {
+		return 1;
+	}
+	return atoi(str);
+}
+
 void parse_terms(int *terms, char *str, int sign) {
 	if (strchr(str, 'X') != NULL) {
 		if (strchr(str, '^') != NULL) {
-			terms[atoi(strchr(str, '^')+1)] = terms[atoi(strchr(str, '^')+1)] + sign * atoi(str);
+			terms[atoi(strchr(str, '^')+1)] = terms[atoi(strchr(str, '^')+1)] + sign * get_coefficient(str);
 		}
 		else {
-			terms[1] = terms[1] + sign * atoi(str);
+			terms[1] = terms[1] + sign * get_coefficient(str);
 		}
 	}
 	else {
-		terms[0] = terms[0] + sign * atoi(str);
+		terms[0] = terms[0] + sign * get_coefficient(str);
 	}
 }
 

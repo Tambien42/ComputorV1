@@ -4,13 +4,14 @@
 #define OVECCOUNT 30
 #include <pcre.h>
 
+
 int format(char *str) {
 	pcre *re;
 	const char *error;
 	int erroffset;
 	int ovector[OVECCOUNT];
 	int rc;
-	const char *regex = "((?:^|\\+|\\-|)(\\d+(\\.\\d+)?)((\\*X\\^\\d+)|(\\*X))?)+=((?:^|\\+|\\-|)(\\d+(\\.\\d+)?)((\\*X\\^\\d+)|(\\*X))?)+";
+	const char *regex = "^((\\+|\\-)?(\\d+(\\.\\d+)?|\\d+(\\.\\d+)?\\*|X)(\\^\\d+)?)+=((\\+|\\-)?(\\d+(\\.\\d+)?|\\d+(\\.\\d+)?\\*|X)(\\^\\d+)?)+$";
 
 	re = pcre_compile(regex, 0,  &error,  &erroffset, NULL);
 	if (re == NULL) {

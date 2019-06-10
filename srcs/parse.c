@@ -1,29 +1,23 @@
 #include "computorV1.h"
 #include <stdio.h>
 
-int polynomial_degree(char *equation) {
-	int degree = 0;
-	int max = 0;
-	char *copy;
+int polynomial_degree(char *equation, int degree) {
 	char *ret;
+	int exponent = 0;
 
-	copy = malloc(sizeof(char) * strlen(equation) +1);
-	strncpy(copy, equation, strlen(equation));
-	while ((ret = strchr(copy, 'X')) != NULL) {
-		if ((strchr(ret, '^')) != NULL) {
-			max = atoi(ret+2);
-			memcpy(copy, ret+2, strlen(ret-1));
-			if (max > degree) {
-				degree = max;
-			}
+	if ((ret = strchr(equation, 'X')) != NULL) {
+		if ((ret = strchr(ret, '^')) != NULL) {
+			exponent = atoi(ret+1);
 		}
 		else {
-			if (degree == 1 || degree == 0)
-				degree = 1;
-			memcpy(copy, ret+1, strlen(ret-1));
+			exponent = 1;
+			ret = equation;
+		}
+		degree = polynomial_degree(ret+1, exponent);
+		if (exponent > degree) {
+			degree = exponent;
 		}
 	}
-	free(copy);
 	return degree;
 }
 
@@ -50,7 +44,7 @@ void parse_terms(int *terms, char *str, int sign) {
 
 void parse(char *equation) {
 	char **members;
-	int terms[polynomial_degree(equation)];
+	int terms[polynomial_degree(equation, 0)];
 	int sign;
 	char *ret;
 	char *copy;
@@ -92,10 +86,10 @@ void parse(char *equation) {
 		i++;
 	}
 	printf("Reduced form: ");
-	if (polynomial_degree(equation) == 0 || check_zero(terms, polynomial_degree(equation)) == 0)
+	if (polynomial_degree(equation, 0) == 0 || check_zero(terms, polynomial_degree(equation, 0)) == 0)
 		printf("%d = 0\n", terms[0]);
 	else
-		print_equation(terms, polynomial_degree(equation));
-	printf("Polynomial degree: %d\n", polynomial_degree(equation));
-	solve(terms, polynomial_degree(equation));
+		print_equation(terms, polynomial_degree(equation, 0));
+	printf("Polynomial degree: %d\n", polynomial_degree(equation, 0));
+	solve(terms, polynomial_degree(equation, 0));
 }

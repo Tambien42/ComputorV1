@@ -18,7 +18,7 @@ typedef struct {
 } Fraction;
 
 void parse(char *equation);
-int polynomial_degree(char *equation);
+int polynomial_degree(char *equation, int degree);
 void solve(int *terms, int degree);
 void third_degree(int *terms);
 void second_degree(float discriminant, int *terms);

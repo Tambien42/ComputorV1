@@ -19,7 +19,8 @@ int main(int argc, char const *argv[]) {
 		help();
 		exit(0);
 	}
+
 	parse(equation);
-	free(equation);
+	//free(equation);
 	return 0;
 }

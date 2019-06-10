@@ -11,7 +11,7 @@ int format(char *str) {
 	int erroffset;
 	int ovector[OVECCOUNT];
 	int rc;
-	const char *regex = "^((\\+|\\-)?(\\d+(\\.\\d+)?|\\d+(\\.\\d+)?\\*|X)(\\^\\d+)?)+=((\\+|\\-)?(\\d+(\\.\\d+)?|\\d+(\\.\\d+)?\\*|X)(\\^\\d+)?)+$";
+	const char *regex = "^((\\+|\\-)?(\\d+(\\.\\d+)?|\\d+(\\.\\d+)?\\*X|X)(\\^\\d+)?)+=((\\+|\\-)?(\\d+(\\.\\d+)?|\\d+(\\.\\d+)?\\*X|X)(\\^\\d+)?)+$";
 
 	re = pcre_compile(regex, 0,  &error,  &erroffset, NULL);
 	if (re == NULL) {
@@ -32,10 +32,10 @@ int format(char *str) {
 			return 1;
 		}
 	}
-	if (rc < 3) {
-		printf("Match did not catch all the groups\n");
-		return 1;
-	}
+	// if (rc < 3) {
+	// 	printf("Match did not catch all the groups\n");
+	// 	return 1;
+	// }
 	printf("\nMatch succeeded at offset %d\n", ovector[0]);
 	return 0;
 }

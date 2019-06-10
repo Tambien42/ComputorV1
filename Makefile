@@ -6,7 +6,7 @@
 #    By: fchuc <fchuc@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/10 12:00:28 by fchuc             #+#    #+#              #
-#    Updated: 2019/02/03 19:25:13 by fchuc            ###   ########.fr        #
+#    Updated: 2019/06/08 16:27:33 by fchuc            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,9 @@ SRC_FILES = main.c \
 			solve.c \
 			print.c \
 			format.c \
-			fraction.c
+			fraction.c \
+			cubic.c \
+			quartic.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
 

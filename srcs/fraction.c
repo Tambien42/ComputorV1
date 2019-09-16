@@ -1,45 +1,55 @@
 #include "computorV1.h"
 #include <stdio.h>
 
-#define PRECISION 1e-6
+#define accuracyfactor 0.000005
 
-int gcd(int a, int b)
-{
-    if (a == 0) return b;
-    if (b == 0) return a;
-
-    if (a > b)
-        return gcd(b, a % b);
-    else
-        return gcd(a, b % a);
-}
-
-Fraction dec2frac(double input) {
-	float signOfInput = (input >= 0.0)? 1.0 : -1.0;
-	input = input * signOfInput; // Make input positive.
-
-	double z[2] = { 0, input }; // { zLast, zNow }
-	int d[2] = { 0, 1 }; // { dLast, dNow }
-	int n = 0;
-
-	while ((fabs(z[1] - roundf(z[1])) > PRECISION && fabs(z[0] - z[1]) > PRECISION)) {
-		double fracPart = (z[1] - floorf(z[1]));
-		z[0] = z[1];
-		z[1] = 1.0/fracPart;
-		int intPart = floorf(z[1]);
-		int oldD = d[1];
-		d[1] = (d[1] * intPart) + d[0];
-		d[0] = oldD;
-		n = roundf(input * d[1]);
+void decimal_to_fraction(double decimal) {
+	double number = 0.0;
+	double decimalsign = 0.0;
+	double z = 0;
+	double previousdenominator = 0.0;
+	double scratchvalue = 0.0;
+	double numerator = 0.0;
+	double denominator = 1.0;
+	printf("decimal %f\n", decimal);
+	decimalsign = (decimal < 0) ? -1.0 : 1.0;
+	printf("sign %f\n", decimalsign);
+	number = fabs(decimal);
+	// handles exact integer including 0
+	if (fmod(decimal, 1.0) == 0.0) {
+		numerator = (int) number * decimalsign;
+		denominator = 1.0;
+		return;
 	}
+	if (number < 1.0e-19) {
+		numerator = decimalsign;
+		denominator = 9999999999999999999.0;
+		return;
+	}
+	if (number > 1.0e+19) {
+		numerator = 9999999999999999999.0 * decimalsign;
+		denominator = 1.0;
+		return;
+	}
+	z = number;
+	z = 1.0 / (z - (int) z);
+	scratchvalue = denominator;
+	denominator = denominator * (int) z + previousdenominator;
+	previousdenominator = scratchvalue;
+	numerator = (int) (number * denominator + 0.5);
+	while (fabs(number - (numerator/denominator)) > accuracyfactor && fmod(z, 1.0) != 0.0) {
+		z = 1.0 / (z - (int) z);
+		scratchvalue = denominator;
+		denominator = denominator * (int) z + previousdenominator;
+		previousdenominator = scratchvalue;
+		numerator = (int) (number * denominator + 0.5);
+		printf("boucle z %f\n", z);
+		printf("boucle numerator %f\n", numerator);
+		printf("boucle denominator %f\n", denominator);
+	}
+	printf("sign %f\n", decimalsign);
+	numerator = numerator * decimalsign;
+	printf("%.0f / %.0f\n", numerator, denominator);
+	printf("END========================\n");
 
-	int theGCD = gcd(n, d[1]);
-	n = n/theGCD;
-	d[1] = d[1]/theGCD;
-
-	Fraction result;
-	result.numerator = signOfInput * n;
-	result.denominator = d[1];
-
-	return result;
 }

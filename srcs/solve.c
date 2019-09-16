@@ -20,13 +20,13 @@ void first_degree(int *terms) {
 }
 
 void second_degree(float discriminant, int *terms) {
-	float x1 = 0;
-	float x2 = 0;
+	double x1 = 0;
+	double x2 = 0;
 
 	if (terms[1] != 0) {
 		if (discriminant < 0) {
-			float real = -terms[1]/(2*terms[2]);
-			float im = ft_sqrt(-discriminant)/(2*terms[2]);
+			double real = -terms[1]/(2*terms[2]);
+			double im = ft_sqrt(-discriminant)/(2*terms[2]);
 			printf("Discriminant is strictly negative, the two solutions are:\n");
 			printf("%g - %gi\n", real, im);
 			printf("%g + %gi\n", real, im);
@@ -41,8 +41,6 @@ void second_degree(float discriminant, int *terms) {
 			x2 = (-1.0 * terms[1] + sqrt(discriminant)) / (2.0 * terms[2]);
 			printf("%g\n", x1);
 			printf("%g\n", x2);
-			Fraction result = dec2frac((double)x1);
-			printf("%d/%d\n", result.numerator, result.denominator);
 		}
 	}
 	else {
@@ -51,9 +49,10 @@ void second_degree(float discriminant, int *terms) {
 		printf("%g\n", x1);
 		printf("%g\n", x2);
 	}
+	decimal_to_fraction((double)x2);
 }
 
-void fifth_degree() {
+void fourth_degree() {
 	printf("The polynomial degree is stricly greater than 3, can't easily be solved.\n");
 }
 
@@ -86,10 +85,7 @@ void solve(int *terms, int degree) {
 	else if (degree == 3) {
 		third_degree(terms);
 	}
-	else if (degree == 4) {
-		fourth_degree(terms);
-	}
 	else {
-		fifth_degree();
+		fourth_degree();
 	}
 }

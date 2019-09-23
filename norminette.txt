@@ -1,0 +1,70 @@
+Norme: ./srcs/main.c
+Error (line 15): C++ comment
+Error (line 16): bad spacing before help
+Error (line 39): C++ comment
+Norme: ./srcs/format.c
+Error (line 19): function format has 30 lines
+Error (line 19, col 0): format has 6 variables
+Error (line 26): line has 152 characters
+Error (line 31): line has 100 characters
+Error (line 37): switch detected
+Error (line 40): bad indentation
+Error (line 41): bad indentation
+Error (line 43): bad indentation
+Error (line 44): bad indentation
+Norme: ./srcs/print.c
+Error (line 15): function print_equation has 36 lines
+Norme: ./srcs/fraction.c
+Error (line 17): function decimal_to_fraction has 52 lines
+Error (line 17, col 0): decimal_to_fraction has 7 variables
+Error (line 60): line has 93 characters
+Norme: ./srcs/cubic.c
+Error (line 16): C++ comment
+Error (line 17): function third_degree has 58 lines
+Error (line 17): declarations in third_degree must be at the top of the function
+Error (line 17): declarations must be followed by one empty line in third_degree
+Error (line 17): bad spacing before third_degree
+Error (line 17, col 0): third_degree has 24 variables
+Error (line 19, col 8): a is instanciated during declaration
+Error (line 20, col 8): b is instanciated during declaration
+Error (line 21, col 8): c is instanciated during declaration
+Error (line 22, col 8): d is instanciated during declaration
+Error (line 23, col 8): x is instanciated during declaration
+Error (line 24, col 8): x1 is instanciated during declaration
+Error (line 25, col 8): x2 is instanciated during declaration
+Error (line 26, col 8): x3 is instanciated during declaration
+Error (line 27, col 8): x2_im is instanciated during declaration
+Error (line 28, col 8): x3_im is instanciated during declaration
+Error (line 29, col 8): s is instanciated during declaration
+Error (line 30, col 8): u is instanciated during declaration
+Error (line 31, col 8): f is instanciated during declaration
+Error (line 32): line has 106 characters
+Error (line 32, col 8): g is instanciated during declaration
+Error (line 33, col 8): h is instanciated during declaration
+Error (line 36): C++ comment
+Error (line 36, col 1): no newline after block
+Error (line 44): C++ comment
+Error (line 44, col 1): no newline after block
+Error (line 45, col 9): i is instanciated during declaration
+Error (line 46, col 9): j is instanciated during declaration
+Error (line 47, col 9): k is instanciated during declaration
+Error (line 48, col 9): l is instanciated during declaration
+Error (line 49, col 9): m is instanciated during declaration
+Error (line 50, col 9): n is instanciated during declaration
+Error (line 51, col 9): p is instanciated during declaration
+Error (line 59): C++ comment
+Error (line 59, col 1): no newline after block
+Error (line 60, col 9): r is instanciated during declaration
+Error (line 65, col 9): t is instanciated during declaration
+Error (line 75): line has 83 characters
+Norme: ./srcs/solve.c
+Error: 7 functions in the file
+Error (line 39): function second_degree has 37 lines
+Error (line 52): line has 83 characters
+Error (line 82): line has 90 characters
+Norme: ./srcs/parse.c
+Error (line 44): line has 95 characters
+Error (line 57): line has 113 characters
+Error (line 70): function parse has 60 lines
+Error (line 70, col 0): parse has 7 variables
+Error (line 126): line has 103 characters

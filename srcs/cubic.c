@@ -6,11 +6,11 @@
 /*   By: fchuc <fchuc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 13:31:48 by fchuc             #+#    #+#             */
-/*   Updated: 2019/09/23 14:30:24 by fchuc            ###   ########.fr       */
+/*   Updated: 2019/09/23 14:57:41 by fchuc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "computorV1.h"
+#include "computorv1.h"
 #include <complex.h>
 
 //What if d = 0?

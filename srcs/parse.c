@@ -6,11 +6,11 @@
 /*   By: fchuc <fchuc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 13:32:17 by fchuc             #+#    #+#             */
-/*   Updated: 2019/09/23 14:20:14 by fchuc            ###   ########.fr       */
+/*   Updated: 2019/09/23 14:57:56 by fchuc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "computorV1.h"
+#include "computorv1.h"
 #include <stdio.h>
 
 int		polynomial_degree(char *equation, int degree)

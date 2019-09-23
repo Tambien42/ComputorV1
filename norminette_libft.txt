@@ -1,0 +1,603 @@
+Norme: ./libft/includes/get_next_line.h
+Norme: ./libft/srcs/binary_to_decimal.c
+Error: 42 header not at top of the file
+Error (line 3): Space before function name
+Error (line 3): declarations must be followed by one empty line in convertBinaryToDecimal
+Error (line 3, col 0): convertBinaryToDecimal not unixcase
+Error (line 5): bad indentation
+Error (line 5): must begin only by tabulations
+Error (line 5): multiple declarations
+Error (line 5, col 8): decimalNumber not unixcase
+Error (line 5, col 8): decimalNumber is instanciated during declaration
+Error (line 5, col 27): i is instanciated during declaration
+Error (line 6): bad indentation
+Error (line 6): must begin only by tabulations
+Error (line 6, col 12): missing space around !=
+Error (line 7): bad indentation
+Error (line 7): must begin only by tabulations
+Error (line 8): bad indentation
+Error (line 8): must begin only by tabulations
+Error (line 8, col 21): missing space around %
+Error (line 9): bad indentation
+Error (line 9): must begin only by tabulations
+Error (line 10): bad indentation
+Error (line 10): must begin only by tabulations
+Error (line 10, col 34): missing space around *
+Error (line 10, col 45): bad character after ,
+Error (line 11): bad indentation
+Error (line 11): must begin only by tabulations
+Error (line 12): bad indentation
+Error (line 12): must begin only by tabulations
+Error (line 13): bad indentation
+Error (line 13): must begin only by tabulations
+Error (line 13, col 11): missing parentheses in return statement
+Norme: ./libft/srcs/binary_to_octal.c
+Error: 42 header not at top of the file
+Error (line 3): multiple empty lines
+Error (line 4): Space before function name
+Error (line 4): bad spacing before convertBinarytoOctal
+Error (line 4, col 0): convertBinarytoOctal not unixcase
+Error (line 4, col 30): binaryNumber not unixcase
+Error (line 6): bad indentation
+Error (line 6): must begin only by tabulations
+Error (line 6): multiple declarations
+Error (line 6, col 8): octalNumber not unixcase
+Error (line 6, col 8): octalNumber is instanciated during declaration
+Error (line 6, col 25): decimalNumber not unixcase
+Error (line 6, col 25): decimalNumber is instanciated during declaration
+Error (line 6, col 44): i is instanciated during declaration
+Error (line 8): bad indentation
+Error (line 8): must begin only by tabulations
+Error (line 8, col 4): missing space after while
+Error (line 9): bad indentation
+Error (line 9): must begin only by tabulations
+Error (line 10): bad indentation
+Error (line 10): must begin only by tabulations
+Error (line 10, col 38): missing space around %
+Error (line 10, col 55): bad character after ,
+Error (line 11): bad indentation
+Error (line 11): must begin only by tabulations
+Error (line 12): bad indentation
+Error (line 12): must begin only by tabulations
+Error (line 12, col 20): missing space around /=
+Error (line 13): bad indentation
+Error (line 13): must begin only by tabulations
+Error (line 14): Empty line
+Error (line 15): bad indentation
+Error (line 15): must begin only by tabulations
+Error (line 16): Empty line
+Error (line 17): bad indentation
+Error (line 17): must begin only by tabulations
+Error (line 18): bad indentation
+Error (line 18): must begin only by tabulations
+Error (line 19): bad indentation
+Error (line 19): must begin only by tabulations
+Error (line 20): bad indentation
+Error (line 20): must begin only by tabulations
+Error (line 21): bad indentation
+Error (line 21): must begin only by tabulations
+Error (line 22): bad indentation
+Error (line 22): must begin only by tabulations
+Error (line 23): Empty line
+Error (line 24): bad indentation
+Error (line 24): must begin only by tabulations
+Error (line 24, col 11): missing parentheses in return statement
+Norme: ./libft/srcs/Q_rsqrt.c
+Error: bad filename : Q_rsqrt.c
+Error: 42 header not at top of the file
+Error (line 3): declarations in Q_rsqrt are bad aligned
+Error (line 3): Space before function name
+Error (line 3, col 0): Q_rsqrt not unixcase
+Error (line 6): multiple declarations
+Error (line 11, col 5): space after dereference
+Error (line 11, col 7): space after (
+Error (line 11, col 14): space after pointer
+Error (line 11, col 16): space after cast
+Error (line 11, col 16): space before )
+Error (line 12, col 18): space after (
+Error (line 12, col 27): space before )
+Error (line 13, col 5): space after dereference
+Error (line 13, col 7): space after (
+Error (line 13, col 15): space after pointer
+Error (line 13, col 17): space after cast
+Error (line 13, col 17): space before )
+Error (line 14, col 9): space after (
+Error (line 14, col 24): space after (
+Error (line 14, col 37): space before )
+Error (line 14, col 39): space before )
+Error (line 15, col 9): space after (
+Error (line 15, col 24): space after (
+Error (line 15, col 37): space before )
+Error (line 15, col 39): space before )
+Error (line 16): Empty line
+Error (line 17, col 8): missing parentheses in return statement
+Norme: ./libft/srcs/decimal_to_binary.c
+Error: 42 header not at top of the file
+Error (line 3): declarations in convertDecimalToBinary are bad aligned
+Error (line 3): Space before function name
+Error (line 3, col 5): convertDecimalToBinary not unixcase
+Error (line 5): bad indentation
+Error (line 5): must begin only by tabulations
+Error (line 5, col 14): binaryNumber not unixcase
+Error (line 5, col 14): binaryNumber is instanciated during declaration
+Error (line 6): bad indentation
+Error (line 6): must begin only by tabulations
+Error (line 6): multiple declarations
+Error (line 6, col 19): i is instanciated during declaration
+Error (line 8): bad indentation
+Error (line 8): must begin only by tabulations
+Error (line 8, col 12): missing space around !=
+Error (line 9): bad indentation
+Error (line 9): must begin only by tabulations
+Error (line 10): bad indentation
+Error (line 10): must begin only by tabulations
+Error (line 10, col 21): missing space around %
+Error (line 11): bad indentation
+Error (line 11): must begin only by tabulations
+Error (line 12): bad indentation
+Error (line 12): must begin only by tabulations
+Error (line 12, col 33): missing space around *
+Error (line 13): bad indentation
+Error (line 13): must begin only by tabulations
+Error (line 14): bad indentation
+Error (line 14): must begin only by tabulations
+Error (line 15): bad indentation
+Error (line 15): must begin only by tabulations
+Error (line 15, col 11): missing parentheses in return statement
+Norme: ./libft/srcs/ft_abs.c
+Norme: ./libft/srcs/decimal_to_octal.c
+Error: 42 header not at top of the file
+Error (line 3): Space before function name
+Error (line 3, col 0): convertDecimalToOctal not unixcase
+Error (line 3, col 26): decimalNumber not unixcase
+Error (line 5): bad indentation
+Error (line 5): must begin only by tabulations
+Error (line 5): multiple declarations
+Error (line 5, col 8): octalNumber not unixcase
+Error (line 5, col 8): octalNumber is instanciated during declaration
+Error (line 5, col 25): i is instanciated during declaration
+Error (line 7): bad indentation
+Error (line 7): must begin only by tabulations
+Error (line 8): bad indentation
+Error (line 8): must begin only by tabulations
+Error (line 9): bad indentation
+Error (line 9): must begin only by tabulations
+Error (line 10): bad indentation
+Error (line 10): must begin only by tabulations
+Error (line 11): bad indentation
+Error (line 11): must begin only by tabulations
+Error (line 12): bad indentation
+Error (line 12): must begin only by tabulations
+Error (line 13): bad indentation
+Error (line 13): must begin only by tabulations
+Error (line 13, col 11): missing parentheses in return statement
+Norme: ./libft/srcs/ft_atoi.c
+Norme: ./libft/srcs/ft_countchr.c
+Norme: ./libft/srcs/ft_delspaces.c
+Error: 42 header not at top of the file
+Error (line 1): preprocessor block must be followed by one empty line
+Error (line 6): Space before function name
+Error (line 6): bad spacing before ft_delspaces
+Error (line 8): bad indentation
+Error (line 8): must begin only by tabulations
+Error (line 8, col 10): i is instanciated during declaration
+Error (line 9): bad indentation
+Error (line 9): must begin only by tabulations
+Error (line 9, col 10): j is instanciated during declaration
+Error (line 11): bad indentation
+Error (line 11): must begin only by tabulations
+Error (line 12): bad indentation
+Error (line 12): must begin only by tabulations
+Error (line 13): bad indentation
+Error (line 13): must begin only by tabulations
+Error (line 14): bad indentation
+Error (line 14): must begin only by tabulations
+Error (line 15): bad indentation
+Error (line 15): must begin only by tabulations
+Error (line 16): bad indentation
+Error (line 16): must begin only by tabulations
+Error (line 17): bad indentation
+Error (line 17): must begin only by tabulations
+Norme: ./libft/srcs/ft_factorial.c
+Norme: ./libft/srcs/ft_is_lowercase.c
+Norme: ./libft/srcs/ft_find_next_prime.c
+Norme: ./libft/srcs/ft_is_negative.c
+Norme: ./libft/srcs/ft_is_prime.c
+Norme: ./libft/srcs/ft_isalnum.c
+Norme: ./libft/srcs/ft_isalpha.c
+Norme: ./libft/srcs/ft_isascii.c
+Norme: ./libft/srcs/ft_isdigit.c
+Norme: ./libft/srcs/ft_isprint.c
+Norme: ./libft/srcs/ft_itoa.c
+Norme: ./libft/srcs/ft_list_last.c
+Norme: ./libft/includes/libft.h
+Error (line 29): must have only tabulations between struct and s_matrix.
+Error (line 29, col 14): bad spacing
+Error (line 30): must begin only by tabulations
+Error (line 30): bad indentation
+Error (line 31): must begin only by tabulations
+Error (line 31): bad indentation
+Error (line 32): must begin only by tabulations
+Error (line 32): bad indentation
+Error (line 115, col 9): Q_rsqrt not unixcase
+Error (line 116, col 3): bad spacing
+Error (line 117, col 4): bad spacing
+Error (line 118, col 4): bad spacing
+Error (line 119, col 3): bad spacing
+Error (line 120, col 3): bad spacing
+Error (line 121, col 9): bad spacing
+Error (line 121, col 13): convertDecimalToBinary not unixcase
+Error (line 122, col 3): bad spacing
+Error (line 122, col 8): convertBinaryToDecimal not unixcase
+Error (line 123, col 3): bad spacing
+Error (line 123, col 8): convertDecimalToOctal not unixcase
+Error (line 123, col 30): decimalNumber not unixcase
+Error (line 124, col 9): bad spacing
+Error (line 124, col 13): convertOctalToDecimal not unixcase
+Error (line 124, col 35): octalNumber not unixcase
+Error (line 125, col 3): bad spacing
+Error (line 125, col 8): convertBinarytoOctal not unixcase
+Error (line 125, col 34): binaryNumber not unixcase
+Error (line 126, col 9): bad spacing
+Error (line 126, col 13): convertOctalToBinary not unixcase
+Error (line 126, col 34): octalNumber not unixcase
+Error (line 128, col 4): bad spacing
+Error (line 129, col 4): bad spacing
+Error (line 130, col 4): bad spacing
+Norme: ./libft/srcs/ft_bzero.c
+Norme: ./libft/srcs/ft_list_size.c
+Norme: ./libft/srcs/ft_is_uppercase.c
+Norme: ./libft/srcs/ft_lstadd.c
+Norme: ./libft/srcs/ft_lstaddq.c
+Norme: ./libft/srcs/ft_lstdel.c
+Norme: ./libft/srcs/ft_list_rev.c
+Norme: ./libft/srcs/ft_lstdelone.c
+Norme: ./libft/srcs/ft_lstiter.c
+Norme: ./libft/srcs/ft_memalloc.c
+Norme: ./libft/srcs/ft_lstmap.c
+Norme: ./libft/srcs/ft_lstnew.c
+Norme: ./libft/srcs/ft_memccpy.c
+Norme: ./libft/srcs/ft_memdel.c
+Norme: ./libft/srcs/ft_memchr.c
+Norme: ./libft/srcs/ft_memcmp.c
+Norme: ./libft/srcs/ft_memcpy.c
+Norme: ./libft/srcs/ft_memset.c
+Norme: ./libft/srcs/ft_power.c
+Norme: ./libft/srcs/ft_putchar_fd.c
+Norme: ./libft/srcs/ft_print_list.c
+Norme: ./libft/srcs/ft_putchar.c
+Norme: ./libft/srcs/ft_memmove.c
+Norme: ./libft/srcs/ft_putendl.c
+Norme: ./libft/srcs/ft_putendl_fd.c
+Norme: ./libft/srcs/ft_putstr.c
+Norme: ./libft/srcs/ft_putnbr_fd.c
+Norme: ./libft/srcs/ft_putnbr.c
+Norme: ./libft/srcs/ft_putstr_fd.c
+Norme: ./libft/srcs/ft_str_is_lowercase.c
+Norme: ./libft/srcs/ft_str_is_uppercase.c
+Norme: ./libft/srcs/ft_sqrt.c
+Norme: ./libft/srcs/ft_strcat.c
+Norme: ./libft/srcs/ft_strclr.c
+Norme: ./libft/srcs/ft_strchr.c
+Error (line 32): C++ comment
+Error (line 33): C++ comment
+Error (line 34): C++ comment
+Error (line 35): C++ comment
+Error (line 36): C++ comment
+Error (line 37): C++ comment
+Error (line 38): C++ comment
+Error (line 39): C++ comment
+Error (line 40): C++ comment
+Error (line 41): C++ comment
+Error (line 42): C++ comment
+Error (line 43): C++ comment
+Error (line 44): C++ comment
+Error (line 45): C++ comment
+Error (line 46): C++ comment
+Error (line 47): C++ comment
+Error (line 48): C++ comment
+Norme: ./libft/srcs/ft_strcapitalize.c
+Norme: ./libft/srcs/ft_strcmp.c
+Norme: ./libft/srcs/ft_strcspn.c
+Error: 42 header not at top of the file
+Error (line 5): line has 101 characters
+Error (line 7): Space before function name
+Error (line 7): bad spacing before ft_strcspn
+Error (line 9): bad indentation
+Error (line 9): must begin only by tabulations
+Error (line 9): multiple declarations
+Error (line 11): 2 instructions
+Error (line 11): for detected
+Error (line 11): bad indentation
+Error (line 11): 3 assignations
+Error (line 11): must begin only by tabulations
+Error (line 11, col 9): Multi expression statements
+Error (line 11, col 37): Multi expression statements
+Error (line 11, col 50): no newline before block
+Error (line 12): 2 instructions
+Error (line 12): for detected
+Error (line 12): bad indentation
+Error (line 12): must begin only by tabulations
+Error (line 12, col 38): no newline before block
+Error (line 13): bad indentation
+Error (line 13): missing newline after if
+Error (line 13): must begin only by tabulations
+Error (line 13, col 25): no newline before block
+Error (line 14): bad indentation
+Error (line 14): must begin only by tabulations
+Error (line 14, col 23): missing parentheses in return statement
+Error (line 14, col 24): missing space around -
+Error (line 15): bad indentation
+Error (line 15): must begin only by tabulations
+Error (line 16): bad indentation
+Error (line 16): must begin only by tabulations
+Error (line 17): bad indentation
+Error (line 17): must begin only by tabulations
+Error (line 18): bad indentation
+Error (line 18): must begin only by tabulations
+Error (line 18, col 11): missing parentheses in return statement
+Error (line 18, col 12): missing space around -
+Norme: ./libft/srcs/ft_strdel.c
+Norme: ./libft/srcs/ft_strcpy.c
+Norme: ./libft/srcs/ft_strequ.c
+Norme: ./libft/srcs/ft_striter.c
+Norme: ./libft/srcs/ft_striteri.c
+Norme: ./libft/srcs/ft_strdup.c
+Norme: ./libft/srcs/ft_strlen.c
+Norme: ./libft/srcs/ft_strlcat.c
+Norme: ./libft/srcs/ft_strjoin.c
+Norme: ./libft/srcs/ft_strmap.c
+Norme: ./libft/srcs/ft_strmapi.c
+Norme: ./libft/srcs/ft_strncat.c
+Norme: ./libft/srcs/ft_strncmp.c
+Norme: ./libft/srcs/ft_strncpy.c
+Norme: ./libft/srcs/ft_strnequ.c
+Norme: ./libft/srcs/ft_strnew.c
+Norme: ./libft/srcs/ft_strnstr.c
+Norme: ./libft/srcs/ft_strrchr.c
+Norme: ./libft/srcs/ft_strrev.c
+Norme: ./libft/srcs/ft_strpbrk.c
+Error: 42 header not at top of the file
+Error (line 1): preprocessor block must be followed by one empty line
+Error (line 7): Space before function name
+Error (line 7): declarations must be followed by one empty line in ft_strpbrk
+Error (line 7): bad spacing before ft_strpbrk
+Error (line 9): bad indentation
+Error (line 9): must begin only by tabulations
+Error (line 9): multiple declarations
+Error (line 9, col 19): flag is instanciated during declaration
+Error (line 10): 3 instructions
+Error (line 10): for detected
+Error (line 10): bad indentation
+Error (line 10): must begin only by tabulations
+Error (line 10, col 34): bad character after ;
+Error (line 11): bad indentation
+Error (line 11): must begin only by tabulations
+Error (line 12): 2 instructions
+Error (line 12): for detected
+Error (line 12): bad indentation
+Error (line 12): must begin only by tabulations
+Error (line 12, col 14): bad character after ;
+Error (line 12, col 33): bad character after ;
+Error (line 13): bad indentation
+Error (line 13): must begin only by tabulations
+Error (line 14): 2 instructions
+Error (line 14): for detected
+Error (line 14): bad indentation
+Error (line 14): must begin only by tabulations
+Error (line 14, col 18): bad character after ;
+Error (line 14, col 37): bad character after ;
+Error (line 15): bad indentation
+Error (line 15): must begin only by tabulations
+Error (line 16): bad indentation
+Error (line 16): must begin only by tabulations
+Error (line 17): bad indentation
+Error (line 17): must begin only by tabulations
+Error (line 18): bad indentation
+Error (line 18): must begin only by tabulations
+Error (line 19): bad indentation
+Error (line 19): must begin only by tabulations
+Error (line 20): bad indentation
+Error (line 20): must begin only by tabulations
+Error (line 21): bad indentation
+Error (line 21): must begin only by tabulations
+Error (line 22): bad indentation
+Error (line 22): must begin only by tabulations
+Error (line 23): bad indentation
+Error (line 23): must begin only by tabulations
+Error (line 24): bad indentation
+Error (line 24): must begin only by tabulations
+Error (line 25): bad indentation
+Error (line 25): must begin only by tabulations
+Error (line 26): bad indentation
+Error (line 26): must begin only by tabulations
+Error (line 27): bad indentation
+Error (line 27): must begin only by tabulations
+Error (line 27, col 15): missing parentheses in return statement
+Error (line 28): bad indentation
+Error (line 28): must begin only by tabulations
+Error (line 28, col 11): missing parentheses in return statement
+Norme: ./libft/srcs/ft_strstr.c
+Norme: ./libft/srcs/ft_strtoupper.c
+Norme: ./libft/srcs/ft_strtolower.c
+Norme: ./libft/srcs/ft_strsub.c
+Norme: ./libft/srcs/ft_tolower.c
+Norme: ./libft/srcs/ft_toradians.c
+Error: 42 header not at top of the file
+Norme: ./libft/srcs/ft_strtrim.c
+Norme: ./libft/srcs/leap_year.c
+Error: 42 header not at top of the file
+Error (line 8): Space before function name
+Error (line 8): bad spacing before leap_year
+Error (line 10): bad indentation
+Error (line 10): must begin only by tabulations
+Error (line 10, col 4): missing space after if
+Error (line 10, col 11): missing space around %
+Error (line 11): bad indentation
+Error (line 11): must begin only by tabulations
+Error (line 12): bad indentation
+Error (line 12): must begin only by tabulations
+Error (line 12, col 8): missing space after if
+Error (line 12, col 10): space after (
+Error (line 12, col 16): missing space around %
+Error (line 13): bad indentation
+Error (line 13): must begin only by tabulations
+Error (line 14): bad indentation
+Error (line 14): must begin only by tabulations
+Error (line 14, col 15): space after (
+Error (line 14, col 21): missing space around %
+Error (line 15): bad indentation
+Error (line 15): must begin only by tabulations
+Error (line 15, col 23): missing parentheses in return statement
+Error (line 16): bad indentation
+Error (line 16): must begin only by tabulations
+Error (line 17): bad indentation
+Error (line 17): must begin only by tabulations
+Error (line 17, col 23): missing parentheses in return statement
+Error (line 18): bad indentation
+Error (line 18): must begin only by tabulations
+Error (line 19): bad indentation
+Error (line 19): must begin only by tabulations
+Error (line 20): bad indentation
+Error (line 20): must begin only by tabulations
+Error (line 20, col 19): missing parentheses in return statement
+Error (line 21): bad indentation
+Error (line 21): must begin only by tabulations
+Error (line 22): bad indentation
+Error (line 22): must begin only by tabulations
+Error (line 23): bad indentation
+Error (line 23): must begin only by tabulations
+Error (line 23, col 15): missing parentheses in return statement
+Error (line 24): bad indentation
+Error (line 24): must begin only by tabulations
+Error (line 24, col 11): missing parentheses in return statement
+Norme: ./libft/srcs/ft_strsplit.c
+Norme: ./libft/srcs/ft_toupper.c
+Norme: ./libft/srcs/octal_to_decimal.c
+Error: 42 header not at top of the file
+Error (line 3): Space before function name
+Error (line 3, col 5): convertOctalToDecimal not unixcase
+Error (line 3, col 32): octalNumber not unixcase
+Error (line 5): bad indentation
+Error (line 5): must begin only by tabulations
+Error (line 5): multiple declarations
+Error (line 5, col 8): decimalNumber not unixcase
+Error (line 5, col 8): decimalNumber is instanciated during declaration
+Error (line 5, col 27): i is instanciated during declaration
+Error (line 7): bad indentation
+Error (line 7): must begin only by tabulations
+Error (line 7, col 4): missing space after while
+Error (line 8): bad indentation
+Error (line 8): must begin only by tabulations
+Error (line 9): bad indentation
+Error (line 9): must begin only by tabulations
+Error (line 9, col 37): missing space around %
+Error (line 9, col 54): bad character after ,
+Error (line 10): bad indentation
+Error (line 10): must begin only by tabulations
+Error (line 11): bad indentation
+Error (line 11): must begin only by tabulations
+Error (line 11, col 19): missing space around /=
+Error (line 12): bad indentation
+Error (line 12): must begin only by tabulations
+Error (line 13): Empty line
+Error (line 14): bad indentation
+Error (line 14): must begin only by tabulations
+Error (line 15): Empty line
+Error (line 16): bad indentation
+Error (line 16): must begin only by tabulations
+Error (line 16, col 11): missing parentheses in return statement
+Norme: ./libft/srcs/pgcd.c
+Error: 42 header not at top of the file
+Error (line 3): Space before function name
+Error (line 5): bad indentation
+Error (line 5): must begin only by tabulations
+Error (line 6): bad indentation
+Error (line 6): must begin only by tabulations
+Error (line 7): bad indentation
+Error (line 7): must begin only by tabulations
+Error (line 7, col 4): missing space after while
+Error (line 7, col 12): missing space around !=
+Error (line 8): bad indentation
+Error (line 8): must begin only by tabulations
+Error (line 9): bad indentation
+Error (line 9): must begin only by tabulations
+Error (line 9, col 8): missing space after if
+Error (line 10): bad indentation
+Error (line 10): must begin only by tabulations
+Error (line 11): bad indentation
+Error (line 11): must begin only by tabulations
+Error (line 12): bad indentation
+Error (line 12): must begin only by tabulations
+Error (line 13): bad indentation
+Error (line 13): must begin only by tabulations
+Error (line 14): bad indentation
+Error (line 14): must begin only by tabulations
+Error (line 14, col 11): missing parentheses in return statement
+Norme: ./libft/srcs/octal_to_binary.c
+Error: 42 header not at top of the file
+Error (line 3): declarations in convertOctalToBinary are bad aligned
+Error (line 3): Space before function name
+Error (line 3, col 5): convertOctalToBinary not unixcase
+Error (line 3, col 31): octalNumber not unixcase
+Error (line 5): bad indentation
+Error (line 5): must begin only by tabulations
+Error (line 5): multiple declarations
+Error (line 5, col 8): decimalNumber not unixcase
+Error (line 5, col 8): decimalNumber is instanciated during declaration
+Error (line 5, col 27): i is instanciated during declaration
+Error (line 6): bad indentation
+Error (line 6): must begin only by tabulations
+Error (line 6, col 14): binaryNumber not unixcase
+Error (line 6, col 14): binaryNumber is instanciated during declaration
+Error (line 8): bad indentation
+Error (line 8): must begin only by tabulations
+Error (line 8, col 4): missing space after while
+Error (line 9): bad indentation
+Error (line 9): must begin only by tabulations
+Error (line 10): bad indentation
+Error (line 10): must begin only by tabulations
+Error (line 10, col 37): missing space around %
+Error (line 10, col 54): bad character after ,
+Error (line 11): bad indentation
+Error (line 11): must begin only by tabulations
+Error (line 12): bad indentation
+Error (line 12): must begin only by tabulations
+Error (line 12, col 19): missing space around /=
+Error (line 13): bad indentation
+Error (line 13): must begin only by tabulations
+Error (line 14): Empty line
+Error (line 15): bad indentation
+Error (line 15): must begin only by tabulations
+Error (line 16): Empty line
+Error (line 17): bad indentation
+Error (line 17): must begin only by tabulations
+Error (line 18): bad indentation
+Error (line 18): must begin only by tabulations
+Error (line 19): bad indentation
+Error (line 19): must begin only by tabulations
+Error (line 20): bad indentation
+Error (line 20): must begin only by tabulations
+Error (line 21): bad indentation
+Error (line 21): must begin only by tabulations
+Error (line 22): bad indentation
+Error (line 22): must begin only by tabulations
+Error (line 23): Empty line
+Error (line 24): bad indentation
+Error (line 24): must begin only by tabulations
+Error (line 24, col 11): missing parentheses in return statement
+Norme: ./libft/srcs/print_array.c
+Error: 42 header not at top of the file
+Error (line 3): Space before function name
+Error (line 3, col 45): no newline before block
+Error (line 7): missing newline after while
+Error (line 7, col 21): no newline before block
+Error (line 14): Space before function name
+Error (line 14, col 48): no newline before block
+Error (line 18): missing newline after while
+Error (line 18, col 21): no newline before block
+Error (line 25): Space before function name
+Error (line 25, col 47): no newline before block
+Error (line 29): missing newline after while
+Error (line 29, col 21): no newline before block
+Norme: ./libft/srcs/get_next_line.c

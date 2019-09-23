@@ -6,11 +6,11 @@
 /*   By: fchuc <fchuc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 13:32:28 by fchuc             #+#    #+#             */
-/*   Updated: 2019/09/23 14:37:27 by fchuc            ###   ########.fr       */
+/*   Updated: 2019/09/23 14:58:04 by fchuc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "computorV1.h"
+#include "computorv1.h"
 
 float	discriminant(int *terms)
 {

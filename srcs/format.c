@@ -6,48 +6,46 @@
 /*   By: fchuc <fchuc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 13:32:00 by fchuc             #+#    #+#             */
-/*   Updated: 2019/09/23 13:32:01 by fchuc            ###   ########.fr       */
+/*   Updated: 2019/09/23 14:12:13 by fchuc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "computorV1.h"
 #include <stdio.h>
 #include <stdlib.h>
-#define OVECCOUNT 30
 #include <pcre.h>
+#define OVECCOUNT 30
 
+int	format(char *str)
+{
+	pcre		*re;
+	const char	*error;
+	int			erroffset;
+	int			ovector[OVECCOUNT];
+	int			rc;
+	const char	*regex = "^((\\+|\\-)?(\\d+(\\.\\d+)?|\\d+(\\.\\d+)?\\*X|X)(\\^\\d+)?)+=((\\+|\\-)?(\\d+(\\.\\d+)?|\\d+(\\.\\d+)?\\*X|X)(\\^\\d+)?)+$";
 
-int format(char *str) {
-	pcre *re;
-	const char *error;
-	int erroffset;
-	int ovector[OVECCOUNT];
-	int rc;
-	const char *regex = "^((\\+|\\-)?(\\d+(\\.\\d+)?|\\d+(\\.\\d+)?\\*X|X)(\\^\\d+)?)+=((\\+|\\-)?(\\d+(\\.\\d+)?|\\d+(\\.\\d+)?\\*X|X)(\\^\\d+)?)+$";
-
-	re = pcre_compile(regex, 0,  &error,  &erroffset, NULL);
-	if (re == NULL) {
+	re = pcre_compile(regex, 0, &error, &erroffset, NULL);
+	if (re == NULL)
+	{
 		fprintf(stderr, "PCRE compilation failed at expression offset %d: %s\n", erroffset, error);
-		return 1;
+		return (1);
 	}
-
-	rc = pcre_exec(re, NULL, str, strlen(str), 0, 0,  ovector, OVECCOUNT);
-	if (rc < 0) {
-		switch(rc) {
+	rc = pcre_exec(re, NULL, str, strlen(str), 0, 0, ovector, OVECCOUNT);
+	if (rc < 0)
+	{
+		switch (rc)
+		{
 			case PCRE_ERROR_NOMATCH:
 				printf("No match!\n");
-				break;/*More cases defined...*/
+				break ;
 			default:
 				printf("Match error %d\n", rc);
-				break;
+				break ;
 			pcre_free(re);
-			return 1;
+			return (1);
 		}
 	}
-	// if (rc < 3) {
-	// 	printf("Match did not catch all the groups\n");
-	// 	return 1;
-	// }
 	printf("\nMatch succeeded at offset %d\n", ovector[0]);
-	return 0;
+	return (0);
 }

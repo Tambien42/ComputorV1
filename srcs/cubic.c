@@ -6,72 +6,114 @@
 /*   By: fchuc <fchuc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 13:31:48 by fchuc             #+#    #+#             */
-/*   Updated: 2019/09/23 14:57:41 by fchuc            ###   ########.fr       */
+/*   Updated: 2019/09/23 17:16:55 by /usr/bin/whoami  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "computorv1.h"
 #include <complex.h>
 
+typedef struct s_cubic
+{
+	double a;
+	double b;
+	double c;
+	double d;
+	double x;
+	double x1;
+	double x2;
+	double x3;
+	double x2_im;
+	double x3_im;
+	double s;
+	double u;
+	double f;
+	double g;
+	double h;
+	double i;
+	double j;
+	double k;
+	double l;
+	double m;
+	double n;
+	double p;
+	double r;
+	double t;
+} t_cubic;
+
+void initialize(t_cubic cubic, int *terms)
+{
+	cubic.a = = (double)terms[3];
+	cubic.b = = (double)terms[2];
+	cubic.c = = (double)terms[1];
+	cubic.d = = (double)terms[0];
+	cubic.x = 0;
+	cubic.x1 = 0;
+	cubic.x2 = 0;
+	cubic.x3 = 0;
+	cubic.x2_im = 0;
+	cubic.x3_im = 0;
+	cubic.s = 0;
+	cubic.u = 0;
+	cubic.f = ((3.0 * c / a) - ((b * b) / (a * a))) / 3.0;
+	cubic.g = (((2.0 * (b * b * b)) / (a * a * a)) - ((9.0 * b * c) / (a * a)) + (27.0 * d / a)) / 27.0;
+	cubic.h = ((g * g) / 4.0 + (f * f * f) / 27.0);;
+	cubic.i = 0;
+	cubic.j = 0;
+	cubic.k = 0;
+	cubic.l = 0;
+	cubic.m = 0;
+	cubic.n = 0;
+	cubic.p = 0;
+	cubic.r = 0;
+	cubic.t = 0;
+}
 //What if d = 0?
 void	third_degree(int *terms)
 {
-	double a = (double)terms[3];
-	double b = (double)terms[2];
-	double c = (double)terms[1];
-	double d = (double)terms[0];
-	double x = 0;
-	double x1 = 0;
-	double x2 = 0;
-	double x3 = 0;
-	double x2_im = 0;
-	double x3_im = 0;
-	double s = 0;
-	double u = 0;
-	double f = ((3.0 * c / a) - ((b * b) / (a * a))) / 3.0;
-	double g = (((2.0 * (b * b * b)) / (a * a * a)) - ((9.0 * b * c) / (a * a)) + (27.0 * d / a)) / 27.0;
-	double h = ((g * g) / 4.0 + (f * f * f) / 27.0);
+	t_cubic cubic;
+	initialize(cubic, terms);
 
-	if (f == 0 && g == 0 & h == 0)
+	if (cubic.f == 0 && cubic.g == 0 & cubic.h == 0)
 	{ // All roots are real and equal
-		if (d / a >= 0)
-			x = pow((d / (1.0 * a)), 1 / 3.0) * -1;
+		if (cubic.d / cubic.a >= 0)
+			cubic.x = pow((cubic.d / (1.0 * cubic.a)), 1 / 3.0) * -1;
 		else
-			x = pow((d / (1.0 * a)), 1 / 3.0);
-		printf("%g\n", x);
+			cubic.x = pow((d / (1.0 * a)), 1 / 3.0);
+		printf("%g\n", cubic.x);
 	}
 	else if (h <= 0)
 	{ // All 3 roots are real
-		double i = sqrt((g * g / 4.0) - h);
-		double j = pow(i, 1 / 3.0);
-		double k = acos(-(g / (2 * i)));
-		double l = j * -1;
-		double m = cos(k / 3.0);
-		double n = sqrt(3) * sin(k / 3.0);
-		double p = (b / (3.0 * a)) * -1;
+		cubic.i = sqrt((cubic.g * cubic.g / 4.0) - cubic.h);
+		cubic.j = pow(cubic.i, 1 / 3.0);
+		cubic.k = acos(-(cubic.g / (2 * cubic.i)));
+		cubic.l = j * -1;
+		cubic.m = cos(cubic.k / 3.0);
+		cubic.n = sqrt(3) * sin(cubic.k / 3.0);
+		cubic.p = (cubic.b / (3.0 * cubic.a)) * -1;
 
-		x1 = 2 * j * cos(k / 3.0) - (b / (3.0 * a));
-		x2 = l * (m + n) + p;
-		x3 = l * (m - n) + p;
-		printf("x1 = %g x2 = %g x3 = %g\n", x1, x2, x3);
+		cubic.x1 = 2 * cubic.j * cos(cubic.k / 3.0) - (cubic.b / (3.0 * cubic.a));
+		cubic.x2 = cubic.l * (cubic.m + cubic.n) + cubic.p;
+		cubic.x3 = cubic.l * (cubic.m - cubic.n) + cubic.p;
+		printf("x1 = %g x2 = %g x3 = %g\n", cubic.x1, cubic.x2, cubic.x3);
 	}
-	else if (h > 0)
+	else if (cubic.h > 0)
 	{ // One real roots and two complex roots
-		double r = -(g / 2.0) + sqrt(h);
-		if (r >= 0)
-			s = pow(r, 1 / 3.0);
+		cubic.r = -(cubic.g / 2.0) + sqrt(cubic.h);
+		if (cubic.r >= 0)
+			cubic.s = pow(cubic.r, 1 / 3.0);
 		else
-			s = pow((-r), 1 / 3.0) * -1;
-		double t = -(g / 2.0) - sqrt(h);
-		if (t >= 0)
-			u = pow(t, 1 / 3.0);
+			cubic.s = pow((-cubic.r), 1 / 3.0) * -1;
+		cubic.t = -(cubic.g / 2.0) - sqrt(cubic.h);
+		if (cubic.t >= 0)
+			cubic.u = pow(cubic.t, 1 / 3.0);
 		else
-			u = pow(t, 1 / 3.0) * -1;
-		x1 = (s + u) - (b / (3.0 * a));
-		x2 = -(s + u) / 2 - (b / (3.0 * a));
-		x2_im = (s - u) * sqrt(3) * 0.5;
-		x3 = -(s + u) / 2 - (b / (3.0 * a));
-		x3_im = -(s - u) * sqrt(3) * 0.5;
-		printf("x1 = %g x2 = %g + %gi x3 = %g + %gi\n", x1, x2, x2_im, x3, x3_im);
+			cubic.u = pow(cubic.t, 1 / 3.0) * -1;
+		cubic.x1 = (cubic.s + cubic.u) - (cubic.b / (3.0 * cubic.a));
+		cubic.x2 = -(cubic.s + cubic.u) / 2 - (cubic.b / (3.0 * cubic.a));
+		cubic.x2_im = (cubic.s - cubic.u) * sqrt(3) * 0.5;
+		cubic.x3 = -(cubic.s + cubic.u) / 2 - (cubic.b / (3.0 * cubic.a));
+		cubic.x3_im = -(cubic.s - cubic.u) * sqrt(3) * 0.5;
+		printf("x1 = %g x2 = %g + %gi x3 = %g + %gi\n", cubic.x1, cubic.x2, cubic.x2_im, cubic.x3, cubic.x3_im);
 	}
 }

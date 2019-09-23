@@ -6,7 +6,7 @@
 /*   By: fchuc <fchuc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 13:32:28 by fchuc             #+#    #+#             */
-/*   Updated: 2019/09/23 17:38:41 by /usr/bin/whoami  ###   ########.fr       */
+/*   Updated: 2019/09/23 18:17:06 by /usr/bin/whoami  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,8 @@ void	second_degree(float discriminant, int *terms)
 		x2 = (1.0 * terms[0] / terms[2]);
 		printf("%g\n", x1);
 		printf("%g\n", x2);
+		decimal_to_fraction((double)x1);
 	}
-	decimal_to_fraction((double)x2);
 }
 
 void	fourth_degree(void)
